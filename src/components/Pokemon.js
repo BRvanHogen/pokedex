@@ -1,8 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import './App.css';
+import '../Pokemon.css';
+import '../fonts/fonts.css';
 import axios from 'axios';
+import urlNumber from '../App';
+import url from '../App';
 
-function Pokemon({name}) {
+function Pokemon({name, url}) {
     const [singlePokemon, setSinglePokemon] = useState({});
     const [abilities, setAbilities] = useState([]);
     const [moves, setMoves] = useState([]);
@@ -23,15 +26,15 @@ function Pokemon({name}) {
     useEffect(() => {
         //function call
         fetchSinglePokemon();
-    }, []);  //moet na function call, anders loop
+    }, [url]);  //moet na function call, anders loop
 
 
     return (
         <>
-            <div>
-                <p>{singlePokemon.name}</p>
-                <p>{singlePokemon.weight}lbs</p>
+            <div className="pokemon-card">
+                <h3>{singlePokemon.name}</h3>
                 {singlePokemon.sprites && <img src={singlePokemon.sprites.front_default}/>}
+                <p>weight: {singlePokemon.weight}lbs</p>
                 <p>number of abilities: {abilities}</p>
                 <p>number of moves: {moves}</p>
             </div>

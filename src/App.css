@@ -1,0 +1,38 @@
+body {
+    font-family: 'quicksand', sans-serif;
+    font-style: normal;
+    background-color: white;
+    color: rgb(46, 105, 179);
+}
+
+
+/*cards layout*/
+ul {
+    list-style-type: none;
+    column-count: 4;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    color: rgb(46, 105, 179);
+    padding: 5px;
+}
+
+button:hover {
+    background-color: rgb(254, 202, 27);
+    cursor: pointer;
+    transition: .35s background-color ease-in-out;
+
+}
+
+button:disabled {
+    background-color: lightgray;
+}

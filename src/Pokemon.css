@@ -1,0 +1,27 @@
+.pokemon-card {
+    font-family: 'quicksand', sans-serif;
+    font-style: normal;
+    border: solid 10px rgb(46, 105, 179);
+    border-radius: 10px;
+    background-color: rgb(254, 202, 27);
+}
+
+.pokemon-card h3 {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    border: solid 3px rgb(46, 105, 179);
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.pokemon-card p {
+    display: flex;
+    justify-content: center;
+}
+
+.pokemon-card img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
